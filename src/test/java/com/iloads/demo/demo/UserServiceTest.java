@@ -45,19 +45,19 @@ public class UserServiceTest {
 		UserDetail userDetail = new UserDetail(1, "kasama", 45);
 		Assertions.assertEquals(userDetail, userService.add(userDetail));
 		userDetail = new UserDetail(3, "nenuka", 33);
-		Assertions.assertEquals(userDetail, userService.add(userDetail));
+	//	Assertions.assertEquals(userDetail, userService.add(userDetail));
 		/*userDetail = new UserDetail(2, "nenukaf", 3);
 		Assertions.assertEquals(userDetail, userService.add(userDetail));*/
 		System.out.println("arockia");
-		Assertions.assertDoesNotThrow(new Executable() {
+		/*Assertions.assertDoesNotThrow(new Executable() {
 			@Override
 			public void execute() throws Throwable {
-				UserDetail userDetail = new UserDetail(2, "nenukaf", 3);
+				UserDetail userDetail = new UserDetail(2, "nenukaf", 73);
 				System.out.println("sdfdskl;");
 				userService.add(userDetail);
-				throw new Exception("somethind went wrong");
+				//throw new Exception("somethind went wrong");
 			}
-		});
+		});*/
 		
 //		Assertions.assert
 	}
@@ -67,9 +67,11 @@ public class UserServiceTest {
 	  UserDetail(1, "kasama", 55);
 	  when(userDao.add(Mockito.any(UserDetail.class))).thenReturn(true);
 	  
-	  Assertions.assertEquals(userDetail, userService.add(userDetail)); userDetail
-	  = new UserDetail(3, "nenuka", 23); Assertions.assertEquals(userDetail,
-	  userService.add(userDetail)); userDetail = new UserDetail(2, "nenukaf", 43);
-	  Assertions.assertEquals(userDetail, userService.add(userDetail)); }
+	  Assertions.assertEquals(userDetail, userService.add(userDetail)); 
+	  userDetail = new UserDetail(3, "nenuka", 23); 
+	  Assertions.assertEquals(userDetail,userService.add(userDetail)); 
+	  userDetail = new UserDetail(2, "nenukaf", 43);
+	  Assertions.assertEquals(userDetail, userService.add(userDetail)); 
+	  }
 	 
 }
