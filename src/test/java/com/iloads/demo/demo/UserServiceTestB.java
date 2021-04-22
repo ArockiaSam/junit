@@ -47,6 +47,7 @@ public class UserServiceTestB {
 				
 				UserDetail userDetail = userService.add(new UserDetail(1, "sd", 63));
 				assertNotNull(userDetail);
+				throw new Exception();
 			}
 		});
 		/*when(userDao.add(Mockito.any())).thenReturn(false);
