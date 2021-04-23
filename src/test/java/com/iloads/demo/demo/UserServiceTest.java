@@ -43,7 +43,7 @@ public class UserServiceTest {
 	public void addServiceTest() {
 		when(userDao.add(Mockito.any(UserDetail.class))).thenReturn(true);
 		UserDetail userDetail = new UserDetail(1, "kasama", 45);
-		Assertions.assertEquals(userDetail, userService.add(userDetail));
+		Assertions.assertNotEquals(userDetail, userService.add(userDetail));
 		userDetail = new UserDetail(3, "nenuka", 33);
 	//	Assertions.assertEquals(userDetail, userService.add(userDetail));
 		/*userDetail = new UserDetail(2, "nenukaf", 3);
